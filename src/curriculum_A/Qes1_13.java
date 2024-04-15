@@ -120,7 +120,7 @@ public class Qes1_13 {
 		String weight2 = String.valueOf(weight);
 
 
-		//コンソールに出力する
+		//コンソールに出力
 		System.out.println(old2 + height2 + weight2 + "\n");
 
 
@@ -133,7 +133,7 @@ public class Qes1_13 {
 		int height4 = (int)height3;
 
 
-		//コンソールに出力する
+		//コンソールに出力
 		System.out.println(old3);
 		System.out.println(height4 + "\n");
 
