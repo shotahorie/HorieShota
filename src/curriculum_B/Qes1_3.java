@@ -14,7 +14,7 @@ public class Qes1_3 {
 		boolean halfwidthAlphanumeric = false;
 		int times = 0;
 		boolean flag2 = true;
-		String me = null;
+		int me = 0;
 		int you = 0;
 
 		
@@ -56,20 +56,20 @@ public class Qes1_3 {
 		while(flag2) {
 
 			//meに自分の手を代入
-			me = sc.nextLine();
+			me = sc.nextInt();
 
 			//1処理ごとに回数を1増やす
 			times += 1;
 
 			//自分の出した手に合わせて出力
 			switch(me) {
-			case "グー":
+			case 0:
 				System.out.println(name + "の手は「グー」");
 				break;
-			case "チョキ":
+			case 1:
 				System.out.println(name + "の手は「チョキ」");
 				break;
-			case "パー":
+			case 2:
 				System.out.println(name + "の手は「パー」");
 				break;
 			}
@@ -94,23 +94,23 @@ public class Qes1_3 {
 
 			//結果に応じてコメント
 			//勝ったら終了
-			if(me.equals("グー") && you == 1 || me.equals("チョキ") && you == 2 || me.equals("パー") && you == 0) {
+			if(me == 0 && you == 1 || me == 1 && you == 2 || me == 2 && you == 0) {
 				System.out.println("やるやん。");
 				System.out.println("次は俺にリベンジさせて\n");
 				flag2 = false;
-			} else if (me.equals("チョキ") && you == 0) {
+			} else if (me == 1 && you == 0) {
 				System.out.println("俺の勝ち！");
 				System.out.println("負けは次につながるチャンスです！");
 				System.out.println("ネバーギブアップ！\n");
-			} else if (me.equals("パー") && you == 1) {
+			} else if (me == 2 && you == 1) {
 				System.out.println("俺の勝ち！");
 				System.out.println("たかがじゃんけん、そう思ってないですか？");
 				System.out.println("それやったら次も、俺が勝ちますよ\n");
-			} else if (me.equals("グー") && you == 2) {
+			} else if (me == 0 && you == 2) {
 				System.out.println("俺の勝ち！");
 				System.out.println("なんで負けたか、明日まで考えといてください。");
 				System.out.println("そしたら何かが見えてくるはずです\n");
-			} else if (me.equals("グー") && you == 0 || me.equals("チョキ") && you == 1 || me.equals("パー") && you == 2) {
+			} else if (me == 0 && you == 0 || me == 1 && you == 1 || me == 2 && you == 2) {
 				System.out.println("DRAW あいこ もう一回しましょう！\n");
 			}
 
