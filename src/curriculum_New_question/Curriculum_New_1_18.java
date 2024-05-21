@@ -10,6 +10,7 @@ public class Curriculum_New_1_18 {
 			greeting = cal + num2;
 			System.out.println(greeting);
 		}
+		
 		// Q2：引数に整数を渡すと渡した値同士を乗算しコンソールに出力するメソッドを作成してください
 		public static void multiplication(int num1,int num2) {
 			int result = num1 * num2;
@@ -33,27 +34,40 @@ public class Curriculum_New_1_18 {
 		// Q5：引数に整数を渡すと、1～100までのランダムな数字を引数の回数分格納して
 		// 格納した値を順番にコンソールで出力後、格納した値を返すメソッドを作成してください。
 		// ※0は出力＆格納しないようにしてください。
-		public static void random(int count) {
+		public static int[] random(int count) {
 			Random rnd = new Random();
 			int [] countNum = new int[count];
-			for(int i = 0;i > countNum.length;i++) {
-				countNum[i] = rnd.nextInt(100 + 1);
-//				countNum[i] = (int)(Math.random() * 10);
+			for(int i = 0;i < countNum.length;i++) {
+				countNum[i] = rnd.nextInt(100) + 1;
 			}
 			for(int allNum:countNum) {
 				System.out.print(allNum + " ");
 			}
-			
-//			return countNum[];
-//			System.out.println(rnd.nextInt(2+1));
-			
+			System.out.println("");
+			return countNum;
 		}
-
+		
 		// Q6：引数にQ5で作成したメソッドの返り値を受け取り、受け取った配列の要素の平均値をコンソールに出力するメソッドを作成してください。
 		// ※小数点以下も表示されるようにしてください。
-		
+		public static int avgNum(int countNum[]) {
+			int j = 0;
+			for(int allNum:countNum) {
+				j += allNum;
+			}
+			int k = j / countNum.length;
+			return k;
+		}
 		
 		// Q7：引数にQ6で作成したメソッドの返り値を受け取り、受け取った値が50以上ならばtrueそれ以外はfalseを返しコンソールに出力してください
+		public static boolean judge(int k) {
+			if(k >= 50) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+
 
 		public static void main(String[] args) {
 	    // 作成したメソッドをここで呼び出してください
@@ -62,10 +76,10 @@ public class Curriculum_New_1_18 {
 		int [] arr = {32,43,54,21};
 		array(arr);
 		multiplication(10.0,20.0);
-		random(5);
-
-		
-		
+		int [] countNum = random(2);
+		int k = avgNum(countNum);
+		boolean result = judge(k);
+		System.out.println(result);
 		}
 
 }
