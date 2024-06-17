@@ -15,31 +15,34 @@ public class Main {
 		int atk;
 		int agi;
 		int def;
-		
+
 		Random rnd = new Random();
 
-		
-		
-		
-		  Scanner sc = new Scanner(System.in);  //Scannerで初期化
-		  name = sc.next();  //文字列の入力の受け取り
-		System.out.println(name);
+		Scanner sc = new Scanner(System.in);  //Scannerで初期化
+		name = sc.next();  //文字列の入力の受け取り
+		//		System.out.println(name);
 
 		Sub sub = new Sub();
 
-		sub.setName(name,rnd.nextInt(1000),rnd.nextInt(1000),rnd.nextInt(1000),rnd.nextInt(1000),rnd.nextInt(1000));
+		//		sub.setName(name,rnd.nextInt(1000),rnd.nextInt(1000),rnd.nextInt(1000),rnd.nextInt(1000),rnd.nextInt(1000));
+		
+		sub.setName(name);
+		sub.setHp(rnd.nextInt(1000));
+		sub.setMp(rnd.nextInt(1000));
+		sub.setAtk(rnd.nextInt(1000));
+		sub.setAgi(rnd.nextInt(1000));
+		sub.setDef(rnd.nextInt(1000));
 
-		
-		
-		
-		
-		
-		sub.getName();
-		
-		
-		
-		
-		
+
+		name = sub.getName();
+		hp = sub.getHp();
+		mp = sub.getMp();
+		atk = sub.getAtk();
+		agi = sub.getAgi();
+		def = sub.getDef();
+
+
+
 		System.out.println("こんにちは 「 " + name + " 」 さん");
 		System.out.println("ステータス");
 		System.out.println("HP：" + hp);
@@ -49,8 +52,8 @@ public class Main {
 		System.out.println("防御力：" + def);
 		System.out.println("");
 		System.out.println("さあ冒険に出かけよう！");
-		
-		
+
+
 		sc.close();
 	}
 }
