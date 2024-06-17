@@ -17,4 +17,3 @@ public class Status {
 		System.out.println("速度：" + spd + "km/h");
 	}
 }
-//nullチェック未完成

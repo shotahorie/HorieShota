@@ -28,7 +28,6 @@ public class Lion {
 	
 	//ゲッター
 	public String getName() {
-		
 		return this.name;
 	}
 	
