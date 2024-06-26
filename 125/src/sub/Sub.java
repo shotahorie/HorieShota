@@ -1,13 +1,13 @@
 package sub;
 public class Sub {
 	//フィールド
-	public String name;
-	public int hp;
-	public int mp;
-	public int atk;
-	public int agi;
-	public int def;
-
+	private String name;
+	private int hp;
+	private int mp;
+	private int atk;
+	private int agi;
+	private int def;
+	
 	//セッター
 	public void setName(String name) {
 		this.name = name;
