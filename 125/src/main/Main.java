@@ -6,10 +6,9 @@ import java.util.Scanner;
 import sub.Status;
 import sub.Sub;
 
-
 public class Main {
 	public static void main(String[] args) {
-
+		//変数の宣言
 		String name = null;
 		int hp;
 		int mp;
@@ -17,16 +16,17 @@ public class Main {
 		int agi;
 		int def;
 
+		//ランダムの追加
 		Random rnd = new Random();
-
-		Scanner sc = new Scanner(System.in);  //Scannerで初期化
-		name = sc.next();  //文字列の入力の受け取り
-		//		System.out.println(name);
-
-		Sub sub = new Sub();
-
-		//		sub.setName(name,rnd.nextInt(1000),rnd.nextInt(1000),rnd.nextInt(1000),rnd.nextInt(1000),rnd.nextInt(1000));
 		
+		//Scannerで名前入力
+		Scanner sc = new Scanner(System.in);
+		name = sc.next();
+		
+		//インスタンスの生成
+		Sub sub = new Sub();
+		
+		//セッターに引数を渡す
 		sub.setName(name);
 		sub.setHp(rnd.nextInt(1000));
 		sub.setMp(rnd.nextInt(1000));
@@ -34,7 +34,7 @@ public class Main {
 		sub.setAgi(rnd.nextInt(1000));
 		sub.setDef(rnd.nextInt(1000));
 
-
+		//変数にゲッターから代入
 		name = sub.getName();
 		hp = sub.getHp();
 		mp = sub.getMp();
@@ -42,8 +42,10 @@ public class Main {
 		agi = sub.getAgi();
 		def = sub.getDef();
 
-Status status = new Status(name,hp,mp,atk,agi,def);
+		//インスタンスの生成
+		Status status = new Status(name,hp,mp,atk,agi,def);
 
+		//scannerを閉じる
 		sc.close();
 	}
 }
