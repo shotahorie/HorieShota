@@ -1,14 +1,22 @@
 package sub;
+import java.util.Random;
 public class Sub {
-	//フィールド
-	private String name;
-	private int hp;
-	private int mp;
-	private int atk;
-	private int agi;
-	private int def;
+	public String name;
 	
-	//セッター
+	public int hp;
+	public int mp;
+	public int atk;
+	public int agi;
+	public int def;
+	Random rnd = new Random();
+//	int hp = rnd.nextInt(1000);
+//	int mp = rnd.nextInt(1000);
+//	int atk = rnd.nextInt(1000);
+//	int agi = rnd.nextInt(1000);
+//	int def = rnd.nextInt(1000);
+	
+	
+	
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -27,8 +35,17 @@ public class Sub {
 	public void setDef(int def) {
 		this.def = def;
 	}
+	
+//	public void setName(String name, int hp, int mp, int atk, int agi, int def){
+//		this.name = name;
+//		this.hp = hp;
+//		this.mp = mp;
+//		this.atk = atk;
+//		this.agi = agi;
+//		this.def = def;
+//		
+//	}
 
-	//ゲッター
 	public String getName() {
 		return name;
 	}
