@@ -3,6 +3,7 @@ package main;
 import java.util.Random;
 import java.util.Scanner;
 
+import subSub;
 import sub.Status;
 
 public class Main {
