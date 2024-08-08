@@ -13,6 +13,6 @@ class Main {
 	    person1.bmi();
 	    person1.print();
 	    
-	    System.out.println("合計は" + Person.num + "です");
+	    System.out.println("合計は" + Person.num + "人です");
 	  }
 	}
